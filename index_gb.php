@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     }
 }
-$gb->save();
+//$gb->save();
 $data = $gb->getData();
 
 include __DIR__ . '/templates/index_tgb.php';

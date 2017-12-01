@@ -39,8 +39,8 @@ class GuestBook
     public function append($text)
     {
         $link = mysqli_connect(DB_HOST, DB_LOGIN, DB_PASSWORD, DB_NAME) or die(mysqli_connect_error());
-        $sql = "INSERT INTO items (content)
-                            VALUES ($text)";
+        $sql = "INSERT INTO items (id, content, gb_time) VALUES (NULL, $text, CURRENT_TIMESTAMP)";
+
         $res = mysqli_query($link, $sql);
         // Отслеживаем ошибки при исполнении запроса
         if( !$res){

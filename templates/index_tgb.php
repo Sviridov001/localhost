@@ -21,7 +21,10 @@
 <hr>
 
 <?php foreach ($data as $line) { ?>
-    <article> <?php echo $line->getMessage(); ?></article>
+    <article> <?php echo $line;?></article>
+     <p>
+   ==========================================
+    </p>
 <?php } ?>
 <br />=================================<br />
 <form action='../index_gb.php' method="post">
